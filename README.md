@@ -16,9 +16,9 @@
 
 ## 📂 Project Structure & Key Files
 - 🚤 **Robot.ino:** Firmware of the Marine Collection Vessel
-      The file needs to be placed in a folder with the same name
+       | The file needs to be placed in a folder with the same name
 - 🎮 **Controller.ino:** Firmware of the Remote Controller
-      The file needs to be placed in a folder with the same name
+       | The file needs to be placed in a folder with the same name
 
 ## IDE and Libraries
 - Install the Arduino IDE 2.3.8 https://www.arduino.cc/en/software/
@@ -44,8 +44,4 @@
 - Compile the file and upload
 
 
-
-
-
-## 🚀 Getting Started Remote Controller
 
