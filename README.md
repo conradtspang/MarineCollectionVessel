@@ -9,7 +9,7 @@
 ## 📖 Overview
 <p>The <b>Marine Collection Vessel</b> is a remote-controlled, and in later phases autonomous, surface vessel designed to collect floating debris from calm waterways.</p>
 <p>An estimated 95% of plastic pollution in the world's seas arrives via major rivers. Cleaning these upstream corridors stops waste before it ever reaches the open ocean. Rivers and harbours also offer reduced wave action, predictable currents and defined boundaries, which makes them ideal for small, quiet, electric robotic vessels. The Marine Collection Vessel is sized to reach places conventional cleaning boats cannot: narrow channels, alongside dock pilings and near shoreline infrastructure.</p>
-<p>The vessel drives <b>in and over</b> floating debris, funnelling it through a rigid collection mouth on the underside of the hull and into an interchangeable collection net at the rear.</p>
+<p>The vessel drives <b>into and over</b> floating debris, funnelling it through a rigid collection mouth on the underside of the hull and into an interchangeable collection net at the rear.</p>
 
 ## ✨ Key Features
 - 🚤 **Catamaran-Style Hull:** A central structure flanked by two buoyant, tear-drop-shaped outriggers for stability in calm water.
@@ -23,7 +23,7 @@
 
 ## 🏗 The Electronics & Control Architecture
 All electronics and sensors are sealed inside the central structure's internal cavity, with motor wiring running through the hollow, waterproof propulsion legs to each thruster.
-The system separates time-critical control loops from high-level decision-making, so no single processor is overloaded:
+</br>The system separates time-critical control loops from high-level decision-making, so no single processor is overloaded:
 1.	Remote Controller (ESP32-S3): Reads the joysticks and buttons, drives the TFT display, and sends commands to the vessel. Powered by a 3.7 V battery, charged and programmed over USB.
 2.	Primary Processor (ESP32): Receives commands, runs real-time motor control and polls sensors.
 3.	Motor Controller & Propulsion: A dual DC motor driver powers two 3-blade thruster 12 V motors, setting each motor's speed and direction independently with minimal power loss.
@@ -73,7 +73,7 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 ## IDE and Libraries
 - Install the Arduino IDE 2.3.8 https://www.arduino.cc/en/software/
 - From the boards manager, install the esp32 by Expressif Systems v3.1.3
-- Install the following libraries Adafruit GFX Library by Adafruit v1.12.6
+- Install Adafruit GFX Library by Adafruit v1.12.6
 - Install Adafruit ST7735 and ST7789 Library by Adafruit v1.11.0
 
 ## 🚀 Getting Started 
@@ -82,7 +82,7 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 
 1. Copy Robot.ino to your computer and place it in a folder with the same name
 2. Open the file
-3. From the board manager, select the DOIT ESP32 DEVKIT V1
+3. From the board manager, select DOIT ESP32 DEVKIT V1
 4. Update peerAddress[] with the Remote's MAC address
 5. Update the encryption keys pmk_key[16] and lmk_key[16] with random numbers
 6. Compile and upload
@@ -94,7 +94,7 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 - Enable USB CDC On Boot
 - Update peerAddress[] with the Vessel's MAC address
 - Update the encryption keys pmk_key[16] and lmk_key[16] with the same values used on the vessel
-- Compile the file and upload
+- Compile and upload
 
 ##
 <div align="center">
