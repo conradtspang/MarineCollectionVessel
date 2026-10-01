@@ -46,6 +46,111 @@ Phase 2 Additions
 - MEMS IMU → Primary Processor: Orientation, heading, speed
 - Camera → Raspberry Pi (YOLO vision): Image stream
 - Raspberry Pi → Primary Processor: Navigation data
+
+<b>Pin mapping table</b>
+<center>
+<table>
+  <tr>
+    <th>ESP32 pin</th>
+    <th>Connects to</th>
+    <th>Signal</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>GPIO32</td>
+    <td>DRV8841 ENA</td>
+    <td>PWM output</td>
+    <td>Left thruster speed</td>
+  </tr>
+    <tr>
+    <td>GPIO33</td>
+    <td>DRV8841 IN1</td>
+    <td>Digital output</td>
+    <td>Left thruster direction</td>
+  </tr>
+    <tr>
+    <td>GPIO25</td>
+    <td>DRV8841 IN2</td>
+    <td>Digital output</td>
+    <td>Left thruster direction</td>
+  </tr>
+    <tr>
+    <td>GPIO26</td>
+    <td>DRV8841 ENB</td>
+    <td>PWM output</td>
+    <td>Right thruster speed</td>
+  </tr>
+    <tr>
+    <td>GPIO27</td>
+    <td>DRV8841 IN3</td>
+    <td>Digital output</td>
+    <td>Right thruster direction</td>
+  </tr>
+    <tr>
+    <td>GPIO23</td>
+    <td>DRV8841 IN4</td>
+    <td>Digital output</td>
+    <td>Right thruster direction</td>
+  </tr>
+      <tr>
+    <td>GPIO34</td>
+    <td>68k/10k voltage divider</td>
+    <td>Analog input (ADC)</td>
+    <td>Battery voltage monitoring</td>
+  </tr>
+        <tr>
+    <td>GPIO2</td>
+    <td>2N7000 MOSFET</td>
+    <td>Digital output</td>
+    <td>Switch Lidar Power rail</td>
+  </tr>
+          <tr>
+    <td>GPIO4</td>
+    <td>2N7000 MOSFET</td>
+    <td>Digital output</td>
+    <td>Switch Raspberry Pi Power rail</td>
+  </tr>
+            <tr>
+    <td colspan="4"><b>Phase 2 (planned)</b></td>
+  </tr>
+           <tr>
+    <td>GPIO19</td>
+    <td>MPU-9250 SCL</td>
+    <td>I²C clock</td>
+    <td>IMU</td>
+  </tr> 
+            <tr>
+    <td>GPIO18</td>
+    <td>MPU-9250 SDA</td>
+    <td>I²C data</td>
+    <td>IMU</td>
+  </tr> 
+              <tr>
+    <td>GPIO21</td>
+    <td>TFmini-S TX</td>
+    <td>UART receive</td>
+    <td>LiDAR</td>
+  </tr> 
+                <tr>
+    <td>GPIO22</td>
+    <td>TFmini-S RX</td>
+    <td>UART transmit</td>
+    <td>LiDAR</td>
+  </tr> 
+             <tr>
+    <td>GPIO17</td>
+    <td>Raspberry Pi TX</td>
+    <td>UART receive</td>
+    <td>Navigation data from Pi</td>
+  </tr> 
+                <tr>
+    <td>GPIO16</td>
+    <td>Raspberry Pi RX</td>
+    <td>UART transmit</td>
+    <td>Navigation data from Pi</td>
+  </tr>
+</table>
+</center>
   
 ## 🗺 Development Roadmap
 The vessel hardware is shared across all phases; each phase adds capability to the electronics and control system.
@@ -80,21 +185,20 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 
 **Marine Collection Vessel (Robot.ino)**
 
-1. Copy Robot.ino to your computer and place it in a folder with the same name
-2. Open the file
-3. From the board manager, select DOIT ESP32 DEVKIT V1
-4. Update peerAddress[] with the Remote's MAC address
-5. Update the encryption keys pmk_key[16] and lmk_key[16] with random numbers
-6. Compile and upload
+1. Open 04_Code/Robot/Robot.ino in the Arduino IDE
+2. From the board manager, select DOIT ESP32 DEVKIT V1
+3. Update peerAddress[] with the Remote's MAC address
+4. Update the encryption keys pmk_key[16] and lmk_key[16] with random numbers
+5. Compile and upload
 
 **Remote Controller (Controller.ino)**
-- Copy Controller.ino to your computer and place it in a folder with the same name
-- Open the file
-- From the board manager, select the ESP32S3 Dev Module
-- Enable USB CDC On Boot
-- Update peerAddress[] with the Vessel's MAC address
-- Update the encryption keys pmk_key[16] and lmk_key[16] with the same values used on the vessel
-- Compile and upload
+
+1. Open 04_Code/Controller/Controller.ino in the Arduino IDE
+2. From the board manager, select the ESP32S3 Dev Module
+3. Enable USB CDC On Boot
+4. Update peerAddress[] with the Vessel's MAC address
+5. Update the encryption keys pmk_key[16] and lmk_key[16] with the same values used on the vessel
+6. Compile and upload
 
 ##
 <div align="center">
