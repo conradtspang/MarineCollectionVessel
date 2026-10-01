@@ -1,3 +1,4 @@
+  <h1>Bill of materials</h1>
 <center>
 <table>
   <tr>
