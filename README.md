@@ -26,7 +26,7 @@ All electronics and sensors are sealed inside the central structure's internal c
 </br>The system separates time-critical control loops from high-level decision-making, so no single processor is overloaded:
 1.	Remote Controller (ESP32-S3): Reads the joysticks and buttons, drives the TFT display, and sends commands to the vessel. Powered by a 3.7 V battery, charged and programmed over USB.
 2.	Primary Processor (ESP32): Receives commands, runs real-time motor control and polls sensors.
-3.	Motor Controller & Propulsion: A dual DC motor driver powers two 3-blade thruster 12 V motors, setting each motor's speed and direction independently with minimal power loss.
+3.	Motor Controller & Propulsion: A dual DC motor driver powers two 3-blade thruster 7.4 V motors, setting each motor's speed and direction independently with minimal power loss.
 4.	Power Supply Unit: Distributes power from the 12 V lithium battery to the motor controller, processor and transceiver.
 5.	Sensors (Phase 2): A LiDAR and a MEMS IMU provide obstacle detection, orientation, heading and speed data to the primary processor.
 6.	Machine-Vision Processor (Raspberry Pi, Phase 2): Handles camera processing, object detection and path planning, and sends recommended routes to the primary processor.
@@ -72,7 +72,7 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 
 ## IDE and Libraries
 - Install the Arduino IDE 2.3.8 https://www.arduino.cc/en/software/
-- From the boards manager, install the esp32 by Expressif Systems v3.1.3
+- From the boards manager, install the esp32 by Espressif Systems v3.1.3
 - Install Adafruit GFX Library by Adafruit v1.12.6
 - Install Adafruit ST7735 and ST7789 Library by Adafruit v1.11.0
 
