@@ -171,9 +171,13 @@ GPS geofencing, return-to-base, automatic charging and net-emptying decisions, a
 
 Behind a wrap-around transparent resin window at the bow, the LiDAR and camera see the front of the vessel.
 
-## 📂 Project Structure & Key Files
-- 🚤 **Robot.ino:** Firmware for the Marine Collection Vessel (ESP32). Receives encrypted ESP-NOW commands, drives the dual DC motor driver via PWM for differential thrust, and reports battery voltage. <i>The file must be placed in a folder with the same name</i>. 
-- 🎮 **Controller.ino:** Firmware for the Remote Controller (ESP32-S3). Reads the joysticks and buttons, renders status and battery information on the TFT display, and transmits encrypted commands to the vessel. <i>The file must be placed in a folder with the same name</i>.
+## 📂 File references
+
+- **[01_Documentation/](/01_Documentation/):** Schematic, block diagram, wiring loom (PDF)
+- **[02_3D_Print_Files/](/02_3D_Print_Files/):** STL files for all 14 parts
+- **[03_Electronics/BOM.md](/03_Electronics/BOM.md):** Parts list
+- 🚤 **[04_Code/Robot/Robot.ino](/04_Code/Robot/Robot.ino):** Vessel firmware (ESP32)
+- 🎮 **[04_Code/Controller/Controller.ino](/04_Code/Controller/Controller.ino):** Remote firmware (ESP32-S3)
 
 ## IDE and Libraries
 - Install the Arduino IDE 2.3.8 https://www.arduino.cc/en/software/
