@@ -174,7 +174,7 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 ## 📂 File references
 
 - **[01_Documentation/](/01_Documentation/07_MarineCollectionVessel_Electronics_Design.pdf):** Schematic, block diagram, wiring loom (PDF)
-- **[02_3D_Print_Files/](/02_3D_Print_Files/):** STL files for all 14 parts
+- **[02_3D_Print_Files/](/02_3D_Print_Files/):** STL files for all 23 parts
 - **[03_Electronics/BOM.md](/03_Electronics/BOM.md):** Parts list
 - 🚤 **[04_Code/Robot/Robot.ino](/04_Code/Robot/Robot.ino):** Vessel firmware (ESP32)
 - 🎮 **[04_Code/Controller/Controller.ino](/04_Code/Controller/Controller.ino):** Remote firmware (ESP32-S3)
