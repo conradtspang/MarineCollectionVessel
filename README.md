@@ -189,7 +189,7 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 
 **Marine Collection Vessel (Robot.ino)**
 
-1. Open 04_Code/Robot/Robot.ino in the Arduino IDE
+1. Open [04_Code/Robot/Robot.ino](/04_Code/Robot/Robot.ino) in the Arduino IDE
 2. From the board manager, select DOIT ESP32 DEVKIT V1
 3. Update peerAddress[] with the Remote's MAC address
 4. Update the encryption keys pmk_key[16] and lmk_key[16] with random numbers
@@ -197,7 +197,7 @@ Behind a wrap-around transparent resin window at the bow, the LiDAR and camera s
 
 **Remote Controller (Controller.ino)**
 
-1. Open 04_Code/Controller/Controller.ino in the Arduino IDE
+1. Open [04_Code/Controller/Controller.ino](/04_Code/Controller/Controller.ino) in the Arduino IDE
 2. From the board manager, select the ESP32S3 Dev Module
 3. Enable USB CDC On Boot
 4. Update peerAddress[] with the Vessel's MAC address
